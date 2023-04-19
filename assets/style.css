@@ -1,0 +1,94 @@
+a{
+    color: white;
+    font-size: 30px;
+    text-align: right;
+}
+
+/* .container{
+    padding: 50px 50px;
+    margin: 0px 100px;
+    border: 2px solid rgba(233, 230, 230, 0.281);
+    border-top: none;
+    box-shadow: 0 0 5px rgba(233, 230, 230, 0.384)
+} */
+.container{
+    padding: 3em;
+    margin: 0 auto;
+    border: 0.2em solid rgba(233, 230, 230, 0.281);
+    border-top: none;
+    box-shadow: 0 0 0.5em rgba(233, 230, 230, 0.384);
+    width: 70%;
+    max-width: 50em;
+}
+nav {
+    display:flex;
+    align-items: space-between;
+}
+
+.nav-text {
+    flex: 1;
+    text-align: right;
+    font-family: Rajdhani;
+}
+
+body {
+    background-image: url(Illustrations/Bathome1.png);
+    background-position:top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-color: rgba(0, 0, 0, 0.993);
+    font-family: Space Grotesk;
+}
+
+.hero {
+    font-size: 20px;
+    color: white;
+    max-width: 500px; /* Définir une largeur maximale pour la div */
+    margin: 0 auto; /*Centrer la div horizontalement*/
+    text-align: center; /* Centrer le texte à l'intérieur de la div */
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    font-family: Rajdhani;
+    font-size: 20px;
+    background: linear-gradient(to right, #EDDEDF 10%, #890008 100%);
+    border: 0;
+}
+
+.hero p{
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.hero a{
+    justify-content: center;
+}
+
+.hero .fleche{
+    margin-top: 350px; 
+}
+
+.card-section {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+    grid-gap: 20px;
+}
+
+.section2 p{
+    padding: 0px 100px;
+    font-size: 20px;
+    color: white;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }

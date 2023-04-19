@@ -4,21 +4,17 @@ a{
     text-align: right;
 }
 
-/* .container{
-    padding: 50px 50px;
-    margin: 0px 100px;
-    border: 2px solid rgba(233, 230, 230, 0.281);
-    border-top: none;
-    box-shadow: 0 0 5px rgba(233, 230, 230, 0.384)
-} */
+h3 {
+    color: white;
+}
+
 .container{
-    padding: 3em;
+    padding: 2em 4em 4em 5em;
     margin: 0 auto;
-    border: 0.2em solid rgba(233, 230, 230, 0.281);
+    border: 0.3em solid rgba(233, 230, 230, 0.112);
     border-top: none;
-    box-shadow: 0 0 0.5em rgba(233, 230, 230, 0.384);
-    width: 70%;
-    max-width: 50em;
+    width: 90%;
+    max-width: 66em;
 }
 nav {
     display:flex;
@@ -29,6 +25,7 @@ nav {
     flex: 1;
     text-align: right;
     font-family: Rajdhani;
+    font-weight: bold;
 }
 
 body {
@@ -44,7 +41,7 @@ body {
 .hero {
     font-size: 20px;
     color: white;
-    max-width: 500px; /* Définir une largeur maximale pour la div */
+    max-width: 550px; /* Définir une largeur maximale pour la div */
     margin: 0 auto; /*Centrer la div horizontalement*/
     text-align: center; /* Centrer le texte à l'intérieur de la div */
 }
@@ -54,8 +51,9 @@ button {
     width: 200px;
     margin: 10px;
     font-family: Rajdhani;
-    font-size: 20px;
-    background: linear-gradient(to right, #EDDEDF 10%, #890008 100%);
+    color: white;
+    font-size: 15px;
+    background: linear-gradient(to right, rgba(237, 222, 223, 0.5) 10%, rgba(137, 0, 8, 0.5) 100%);
     border: 0;
 }
 
@@ -72,6 +70,20 @@ button {
     margin-top: 350px; 
 }
 
+.social-icons {
+    display: inline-block;
+    position:absolute;
+    align-items: center;
+    top: 30%;
+    right: 20px;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    margin: 40px;
+  }
 .card-section {
     margin-top: 70px;
     display: grid;
@@ -79,16 +91,70 @@ button {
     grid-auto-flow: column;
     grid-gap: 20px;
 }
-
-.section2 p{
-    padding: 0px 100px;
+.section {
+    padding: 0 auto;
+}
+.article {
+    width: 90%;
+    padding: 0px 0px 10px 10px;
+    margin-top: 100px;
     font-size: 20px;
+    text-align: justify;
     color: white;
 }
 
 .card {
-    background-color: #fff;
+    position: relative;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+.card p{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.article img{
+    position: absolute; /* Positionnement absolu pour placer l'image à un endroit précis */
+    z-index: -1; /* Place l'image en arrière-plan pour qu'elle apparaisse en-dessous du texte */
+    margin-left: 50px;
+    margin-top: -80px;
+}
+
+.batman {
+    position: relative;
+    top: 2655px; /* ajustez la valeur selon vos besoins */
+    right: 0;
+}
+
+.justiceLeague {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    right: 0;
+}
+
+.multimedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-multimedia {
+    width: 50%;
+    height: 250px;
+    margin-top: 1000px;
+    display: flex;
+    background: linear-gradient(to right, #EDDEBF 40%, #19587D 40%);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .card-multimedia p {
+    flex: 1;
+    font-size: 12px;
   }

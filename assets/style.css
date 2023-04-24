@@ -12,6 +12,7 @@ a{
     margin: 0 auto;
     border: 0.3em solid rgba(233, 230, 230, 0.112);
     border-top: none;
+    border-bottom: none;
     width: 90%;
     max-width: 66em;
 }

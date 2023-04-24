@@ -128,7 +128,7 @@ button:hover{
 
 .batman {
     position: relative;
-    top: 2655px; 
+    top: 2595px; 
     right: 0;
 }
 
@@ -141,9 +141,11 @@ button:hover{
     right: 0;
 }
 
-.text-m {
-    color: white
+#titre-multi{
+    margin-top: 700px;
+    color: white;
 }
+
 .multimedia {
     display: grid;
     margin-top: 100px;
@@ -172,24 +174,29 @@ button:hover{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    text-align: top;
  }
  
  .card-multimedia h4 {
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: bold;
+    opacity: 70%;
     margin-bottom: 5px;
+    letter-spacing: 1px;
  }
  
  .card-multimedia label {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     margin-bottom: 5px;
+    letter-spacing: 1px;
  }
  
  .card-multimedia p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: white;
-    text-align: justify;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
  }
 
  .id {
@@ -203,10 +210,10 @@ button:hover{
 
 .contact {
     width: 100%;
-    background: linear-gradient(to right, #fff8e934 10%, #19587d59 60%);
+    background: linear-gradient(to right, #4b4a4afd 10%, #0f202bf5 60%);
     position: absolute;
     height: auto;
-    margin-top: 200px;
+    margin-top: 150px;
     right: 0;
 }
 
@@ -214,7 +221,14 @@ button:hover{
     width: 40%;
     color: white;
     margin: 0 auto;
+    margin-top: 50px;
     justify-content: center;
+}
+
+#formulaire-contact h3{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
 }
 
 #formulaire-contact input[type="text"], #formulaire-contact input[type="email"] {
@@ -237,6 +251,13 @@ button:hover{
     background-color: transparent;
 }
 
+select option { 
+    background-image: linear-gradient(to right, #fdfdfd7e 10%, #146696c2 60%);
+    margin: 10px;
+    color: black;
+}
+
+
 .div-btn {
     display: flex;
     justify-content: center;
@@ -256,7 +277,8 @@ button:hover{
 }
 
 footer {
-    margin-top: 1000px;
+    margin-top: 900px;
+    margin-bottom: 200px;
     display: grid;
     color: white;
     grid-template-columns: 1fr 2fr 1fr; 
@@ -275,6 +297,7 @@ footer {
     margin-top: 10px;
 }
 
+/* Les trois petit points de navigation */
 .dot {
     width: 5px;
     height: 5px;
@@ -288,6 +311,7 @@ footer {
     background-color: rgb(6, 95, 197);
 }
 
+/* Les appostrophes */
 .quot-o {
     margin-top: -250px;
     margin-left: 80px;
@@ -305,6 +329,7 @@ footer {
     text-align: center;
 }
 
+/* Les icones tout en bas */
 .icons-footer {
     margin-top: 50px;
     margin-bottom: 50px;

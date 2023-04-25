@@ -25,14 +25,6 @@ header {
     border-bottom: 1px solid white;
 }
 
-header img {
-    transition: all 0.5s ease-out; /* Animation de 0,5s avec un effet de transition doux */
-  }
-  
-  header img:hover {
-    transform: scale(1.2);
-  }
-
 /* Container de tous le corps du site */
 .container{
     padding: 2em 4em 4em 5em;
@@ -100,7 +92,7 @@ button:hover{
     top: 30%;
     right: 20px;
 }
-  
+
 .social-icons a {
     margin-right: 10px;
     margin-bottom: 10px;
@@ -131,6 +123,15 @@ button:hover{
     align-items: left;
     text-align: center;
     margin-right: 20px;
+}
+
+/* Annimation des div */
+.card-section img {
+    transition: all 0.5s ease-out; /* Animation de 0,5s avec un effet de transition doux */
+}
+  
+.card-section img:hover {
+    transform: scale(1.1);
 }
 
 .card p{

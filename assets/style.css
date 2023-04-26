@@ -11,30 +11,48 @@ a{
 nav {
     display:flex;
     align-items: space-between;
+    margin: 10px;
+    padding-bottom: 20px;
 }
 
+.nav img:hover{
+    filter: hue-rotate(60deg);
+}
 .nav-text {
     flex: 1;
     text-align: right;
     font-family: Rajdhani;
-    font-weight: bold;
 }
 
 header {
     padding-bottom: 50px;
-    border-bottom: 1px solid white;
+    border-bottom: 0.3em solid rgba(233, 230, 230, 0.112);
+    
 }
 
 /* Container de tous le corps du site */
 .container{
-    padding: 2em 4em 4em 5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     margin: 0 auto;
     border: 0.3em solid rgba(233, 230, 230, 0.112);
     border-top: none;
-    border-bottom: none;
     width: 90%;
     max-width: 66em;
+    animation: container 1s ease-out forwards;
 }
+
+@keyframes container {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+}
+
 
 body {
     background-image: url(Illustrations/Bathome1.png);
@@ -45,10 +63,8 @@ body {
     background-color: rgba(0, 0, 0, 0.993);
     font-family: Space Grotesk;
 }
-
 /* Hero : le classic*/
 .hero {
-    padding-top: 100px;
     font-size: 20px;
     color: white;
     max-width: 550px; 
@@ -73,7 +89,7 @@ button:hover{
 
 .hero p{
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .hero a{
@@ -86,11 +102,12 @@ button:hover{
 
 /* Les icons média sur la droite */
 .social-icons {
+    padding: 0px 70px 70px 0px;
     display: inline-block;
     position:absolute;
     align-items: center;
-    top: 30%;
-    right: 20px;
+    right: -124px;
+    top: 220px;
 }
 
 .social-icons a {
@@ -106,12 +123,14 @@ button:hover{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: column;
-    grid-gap: 30px;
+    grid-gap: 10px;
+    align-items: center;
 }
 
 .article {
     width: 90%;
     margin-top: 100px;
+    padding: 2em;
     font-size: 20px;
     text-align: justify;
     color: white;
@@ -119,10 +138,9 @@ button:hover{
 
 .card {
     border-radius: 5px;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-right: 20px;
 }
 
 /* Annimation des div */
@@ -158,14 +176,21 @@ button:hover{
 /* La photo de la justice league au complet */
 .justiceLeague {
     position: absolute;
-    padding-top: 20px;
+    padding-top: 700px;
     width: 100%;
     height: auto;
     margin-top: 20px;
-    right: 0;
+    width: 140%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Maintenant le div MULTIMEDIA */
+.text-m {
+    margin-top: 700px; 
+    color: white;
+}
+
 .multimedia {
     display: grid;
     margin-top: 100px;
@@ -223,6 +248,11 @@ button:hover{
 .last-grid {
     grid-column-start: 4; 
     grid-column-end: 4;
+}
+
+.bande-annonce {
+    width: 1040px; 
+    height: auto;
 }
 
 /* Le formulaire de contact */
@@ -366,4 +396,45 @@ footer {
     margin-left: 20px;
     display: inline-block;
     vertical-align: middle;
+}
+
+/* Responsivité */
+@media screen and (max-width: 1000px) {
+    .card-section {display: inline;}
+    .article {width: 100%;}
+    .card-section .card img{width: 50%; height: auto;}
+    .batman {visibility: hidden;}
+    .container {justify-content: center; margin: 10px; padding: 0;}
+    .card-multimedia img{width: 30%;}
+    .bande-annonce{width: 700px; height: auto; padding: 2em; align-items: center; justify-content: center;}
+    .justiceLeague{justify-content: center; width: 90%;}
+    .text-m{margin-top: 500px;}
+    .formulaire-contact{width: 70%;}
+    footer .quot-o{width: 70px; height: auto; margin-left: 50px;}
+    footer .quot-f{width: 70px; height: auto; margin-left: 0;}
+    footer .copyright{margin-left: 0;}
+  }
+
+@media screen and (max-width: 850px) {
+    .article {width: 90%; font-size: 18px;}
+    .card-multimedia {background-color: #19587D;}
+    .card-multimedia img{visibility: hidden; background-color: #19587D;}
+    .card-multimedia .text{width: 100%; background-color: #19587D;}
+    .text-m{margin-top: 500px;}
+    .bande-annonce{width: 700px; height: auto; padding: 0; align-items: center; justify-content: center;}
+    .formulaire-contact{padding: 0; margin: 0; width: 40%;}
+    footer .quot-o{width: 40px; height: auto; margin-left: 50px;}
+    footer .quot-f{width: 40px; height: auto; margin-left: 0;}
+    footer .copyright{margin-left: 0;}
+}
+
+@media screen and (max-width: 700px) {
+    .hero .fleche{margin-top: 100px;}
+    .social-icons {position: relative; display: flex; padding: 50px;}
+    .article {width: 100%; font-size: 16px;}
+    .text-m{margin-top: 400px;}
+    .bande-annonce{width: 500px; height: auto; padding: 1em; align-items: center; justify-content: center; margin-bottom: 0;}
+    footer .quot-o{width: 40px; height: auto; margin-left: 2em;}
+    footer .quot-f{width: 40px; height: auto; margin-left: 0;}
+    footer .copyright{margin-left: 0;}
 }

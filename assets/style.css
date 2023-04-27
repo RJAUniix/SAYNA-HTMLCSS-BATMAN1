@@ -11,8 +11,11 @@ a{
 nav {
     display:flex;
     align-items: space-between;
-    margin: 10px;
-    padding-bottom: 20px;
+    margin: 0px 100px 30px 100px ;
+}
+
+.nav img{
+    filter: hue-rotate(0deg);
 }
 
 .nav img:hover{
@@ -26,7 +29,7 @@ nav {
 
 header {
     padding-bottom: 50px;
-    border-bottom: 0.3em solid rgba(233, 230, 230, 0.112);
+    border-bottom: 0.3em solid #bcbbbd23;
     
 }
 
@@ -35,23 +38,12 @@ header {
     padding-top: 2em;
     padding-bottom: 2em;
     margin: 0 auto;
-    border: 0.3em solid rgba(233, 230, 230, 0.112);
+    border: 0.3em solid #bcbbbd23;
     border-top: none;
+    max-width: 100%;
     width: 90%;
-    max-width: 66em;
-    animation: container 1s ease-out forwards;
 }
 
-@keyframes container {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0%);
-    }
-}
 
 
 body {
@@ -62,7 +54,27 @@ body {
     background-attachment:scroll;
     background-color: rgba(0, 0, 0, 0.993);
     font-family: Space Grotesk;
+    overflow-x: hidden;
+    animation: body 1s ease-out forwards;
+
 }
+
+body:not(.social-icons) {
+    animation: body 1s ease-out;
+}
+
+@keyframes body {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+}
+
+
 /* Hero : le classic*/
 .hero {
     font-size: 20px;
@@ -102,19 +114,19 @@ button:hover{
 
 /* Les icons média sur la droite */
 .social-icons {
-    padding: 0px 70px 70px 0px;
-    display: inline-block;
-    position:absolute;
-    align-items: center;
-    right: -124px;
-    top: 220px;
+    padding: 0px 145px 0px 0px;
+    position: fixed;
+    right: -165px;
+    top: 180px;
+    z-index: 9999;
 }
 
-.social-icons a {
+.social-icons a{
     margin-right: 10px;
     margin-bottom: 10px;
     display: flex;
     margin: 40px;
+    justify-content: center;
 }
 
 /* Les articles et les cards */
@@ -169,8 +181,8 @@ button:hover{
 /* La photo de batman sur le côté */
 .batman {
     position: relative;
-    top: 2740px; 
-    right: 0;
+    top: 2890px; 
+    right: 0px;
 }
 
 /* La photo de la justice league au complet */
@@ -180,7 +192,6 @@ button:hover{
     width: 100%;
     height: auto;
     margin-top: 20px;
-    width: 140%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -188,6 +199,7 @@ button:hover{
 /* Maintenant le div MULTIMEDIA */
 .text-m {
     margin-top: 700px; 
+    padding: 20px;
     color: white;
 }
 
@@ -379,11 +391,16 @@ footer {
 }
 
 .copyright {
-    width: 77%;
+    width: 100%;
     position: absolute;
     margin-top: 500px;
     text-align: center;
+    align-items: center;
     justify-content: center;
+}
+
+.copyright label{
+    font-size: 10px;
 }
 
 /* Les icones tout en bas */
@@ -430,7 +447,6 @@ footer {
 
 @media screen and (max-width: 700px) {
     .hero .fleche{margin-top: 100px;}
-    .social-icons {position: relative; display: flex; padding: 50px;}
     .article {width: 100%; font-size: 16px;}
     .text-m{margin-top: 400px;}
     .bande-annonce{width: 500px; height: auto; padding: 1em; align-items: center; justify-content: center; margin-bottom: 0;}

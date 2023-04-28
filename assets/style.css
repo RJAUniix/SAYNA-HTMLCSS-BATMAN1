@@ -14,13 +14,6 @@ nav {
     margin: 0px 100px 30px 100px ;
 }
 
-.nav img{
-    filter: hue-rotate(0deg);
-}
-
-.nav img:hover{
-    filter: hue-rotate(60deg);
-}
 .nav-text {
     flex: 1;
     text-align: right;
@@ -52,7 +45,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment:scroll;
-    background-color: rgba(0, 0, 0, 0.993);
+    background-color: #000000;
     font-family: Space Grotesk;
     overflow-x: hidden;
     animation: body 1s ease-out forwards;
@@ -210,6 +203,7 @@ button:hover{
     color: white;
     grid-template-columns: 1fr 2fr 1fr; 
     align-items: center;
+    padding: 100px;
 }
 
 .card-multimedia {
@@ -227,10 +221,10 @@ button:hover{
     height: 250px;
 }
  
-.card-multimedia .Text { 
+.card-multimedia .text { 
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    margin: 10px;
     text-align: top;
 }
  
@@ -250,7 +244,7 @@ button:hover{
 }
  
 .card-multimedia p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: white;
     margin-bottom: 5px;
     letter-spacing: 1px;
@@ -265,6 +259,7 @@ button:hover{
 .bande-annonce {
     width: 1040px; 
     height: auto;
+    padding: 80px;
 }
 
 /* Le formulaire de contact */
@@ -370,7 +365,7 @@ footer {
     width: 5px;
     height: 5px;
     margin: 0 5px;
-    border: 1px solid rgb(6, 95, 197);
+    border: 1px solid #19587D;
     border-radius: 50%;
     background-color: rgb(0, 0, 0);
 }
@@ -395,8 +390,6 @@ footer {
     position: absolute;
     margin-top: 500px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 .copyright label{

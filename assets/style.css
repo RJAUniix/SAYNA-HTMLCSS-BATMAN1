@@ -174,7 +174,7 @@ button:hover{
 /* La photo de batman sur le côté */
 .batman {
     position: relative;
-    top: 2890px; 
+    top: 2970px; 
     right: 0px;
 }
 
@@ -389,7 +389,9 @@ footer {
     width: 100%;
     position: absolute;
     margin-top: 500px;
+    right: 0;
     text-align: center;
+    justify-content: center;
 }
 
 .copyright label{
@@ -406,6 +408,7 @@ footer {
     margin-left: 20px;
     display: inline-block;
     vertical-align: middle;
+    
 }
 
 /* Responsivité */

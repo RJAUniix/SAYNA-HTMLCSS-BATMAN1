@@ -47,7 +47,13 @@ header {
     max-width: 100%;
 }
 
-
+.logo-hover {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logo-hover:hover {
+    filter: brightness(1.2) hue-rotate(45deg);
+  }
 
 body {
     background-image: url(Illustrations/Bathome1.png);
@@ -61,6 +67,11 @@ body {
     animation: body 1s ease-out forwards;
 
 }
+/* nav img:hover {
+    mask: url(logo.jpg);
+    -webkit-mask-image: url(logo.jpg);
+    background-color: rgb(255, 0, 0);
+} */
 
 body:not(.social-icons) {
     animation: body 1s ease-out;

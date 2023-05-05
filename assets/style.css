@@ -47,12 +47,13 @@ header {
     max-width: 100%;
 }
 
-.logo-hover {
+#logo {
     transition: all 0.3s ease-in-out;
   }
   
-  .logo-hover:hover {
-    filter: brightness(1.2) hue-rotate(45deg);
+#logo:hover {
+    mix-blend-mode: screen;
+    filter: brightness(200%) hue-rotate(60deg);
   }
 
 body {
@@ -330,7 +331,7 @@ button:hover{
 }
 
 select option { 
-    background-image: linear-gradient(to right, #fdfdfd7e 10%, #146696c2 60%);
+    border-image: linear-gradient(to right, #fdfdfd7e 10%, #146696c2 60%);
     margin: 10px;
     color: black;
 }
@@ -360,21 +361,38 @@ select option {
     margin-right: auto;
     margin-bottom: 50px;
 }
+
 /* Popup */
-/* .overlay {
-    position: fixed;
+.popup {
+    background: linear-gradient(118deg , #7e7d7dfd 10%, #173246f5 80%);
+    width: 700px;
+    height: 25em;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
     text-align: center;
-    background-color: #19587D;
-    transition: opacity .4s;
-    padding: 200px;
-    margin-top: -450px;
-    /* visibility: hidden;
-    opacity: 0; */
-/* }
-.overlay:target {
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.popup h1{
+    margin-top: 25%;
+    color: white;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.popup-ouvert {
+    transform: translate(-50%,-50%) scale(1);
     visibility: visible;
-    opacity: 1;
-} */ 
+}
+
 /* footer */
 footer {
     margin-top: 900px;

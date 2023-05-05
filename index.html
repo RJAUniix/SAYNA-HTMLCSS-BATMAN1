@@ -14,7 +14,7 @@
         <div class="container" id="container">
             <header>
                 <nav>
-                    <a href="index.html"><img id="logo" class="logo-hover" src="assets/Logos/logohome.png" alt="logo Batman" width="120px" height="40px"></a>
+                    <a href="index.html"><img id="logo" class="logo" src="assets/Logos/logohome.png" alt="logo Batman" width="120px" height="40px"></a>
                     <!-- <a href="index.html"><object id="logo" type="image/svg+xml" data="assets/Logos/logohome.svg" width="120px" height="40px"></object></a> -->
                     <ul>
                         <li> <a href="index.html">Home</a> </li>
@@ -107,7 +107,7 @@
                         <form id="formulaire-contact">
                             <h3>PRENONS CONTACT</h3>
                             <h4 for="email-adress">ADRESS EMAIL</h4>
-                            <input type="email" name="email-adress" placeholder="Adress email" required>
+                            <input type="email" name="email-adress" id="email-adress" placeholder="Adress email" required>
                             <h4 >NEWSLETTER</h4>
                             <div class="checkbox-form">
                                 <label for="check">En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de Batman :</label>
@@ -129,12 +129,11 @@
                             </div>
                             <h4>MESSAGE</h4>
                             <input type="text" name="commentaire" placeholder="Laissez un commentaire pour la communauté">
-                            <button class="confirm-btn">CONFIRMER</button>
+                            <button class="confirm-btn" type="button" onclick="afficherPopup()">CONFIRMER</button>
                         </form> 
-                        <div id="popup" class="overlay" hidden>
-                            <div class="popup">
-                                <h1>MESSAGE RECU</h1>
-                            </div>
+                        <!-- Création du popup -->
+                        <div id="popup" class="popup">
+                                <h1>MESSAGE RECU !</h1>
                         </div>
                     </div>
                     <footer>
@@ -181,5 +180,32 @@
                 
             
         </div>
+        <script>
+            // let popup = document.getElementById("popup");
+            // let form = document.getElementById("formulaire-contact");
+            // let email = document.getElementById("email-adress").value.valid;
+
+            // function afficherPopup(){  
+            //     if(email) {
+            //         popup.classList.add("popup-ouvert");
+            //         form.classList.add("hide");
+            //         console.log('fuck');
+            //     }
+            // }
+            let popup = document.getElementById("popup");
+            let form = document.getElementById("formulaire-contact");
+            let emailInput = document.getElementById("email-adress");
+
+            function afficherPopup(){  
+                let email = emailInput.value;
+                if(emailInput.checkValidity()) {
+                    popup.classList.add("popup-ouvert");
+                    form.classList.add("hide");
+                }
+                else{
+                    alert('Remplissez le formulaire correctement svp!')
+                }
+            }
+        </script>
 </body>
 </html>

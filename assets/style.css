@@ -3,7 +3,7 @@ a{
     color: white;
     font-size: 30px;
     text-align: right;
-    text-decoration-line: underline;
+    text-decoration-line: none;
     text-decoration-style: 1px;
 }
 
@@ -52,9 +52,8 @@ header {
   }
   
 #logo:hover {
-    mix-blend-mode: screen;
-    filter: brightness(200%) hue-rotate(60deg);
-  }
+    filter: invert(13%) sepia(70%) saturate(5);
+}
 
 body {
     background-image: url(Illustrations/Bathome1.png);
@@ -68,11 +67,6 @@ body {
     animation: body 1s ease-out forwards;
 
 }
-/* nav img:hover {
-    mask: url(logo.jpg);
-    -webkit-mask-image: url(logo.jpg);
-    background-color: rgb(255, 0, 0);
-} */
 
 body:not(.social-icons) {
     animation: body 1s ease-out;

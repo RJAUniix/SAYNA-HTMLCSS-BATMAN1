@@ -36,6 +36,10 @@ header {
     
 }
 
+a[href^="#"] {
+    scroll-behavior: smooth;
+}
+
 /* Container de tous le corps du site */
 .container{
     padding-top: 2em;
@@ -499,3 +503,4 @@ footer {
     footer .quot-f{width: 40px; height: auto; margin-left: 0;}
     footer .copyright{margin-left: 0;}
 }
+

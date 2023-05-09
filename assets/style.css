@@ -33,12 +33,13 @@ nav li:hover {
 header {
     padding-bottom: 50px;
     border-bottom: 0.3em solid #bcbbbd23;
-    
 }
 
+/* Pour éviter la redirection au lien ancre brusquement */
+/* 
 a[href^="#"] {
     scroll-behavior: smooth;
-}
+} */
 
 /* Container de tous le corps du site */
 .container{
@@ -51,11 +52,12 @@ a[href^="#"] {
     max-width: 100%;
 }
 
-#logo {
+/* Annimation des logos qui passent aux jaunes */
+.logo {
     transition: all 0.3s ease-in-out;
-  }
+}
   
-#logo:hover {
+.logo:hover {
     filter: invert(13%) sepia(70%) saturate(5);
 }
 
@@ -72,6 +74,7 @@ body {
 
 }
 
+/* Annimation venant de la droite pour tous les éléments sauf les social-icons */
 body:not(.social-icons) {
     animation: body 1s ease-out;
 }
@@ -128,33 +131,38 @@ button:hover{
 
 /* Les icons média sur la droite */
 .social-icons {
-    padding: 0px 145px 0px 0px;
     position: fixed;
-    right: -126px;
-    top: 180px;
+    right: 29px;
+    top: 250px;
     z-index: 9999;
 }
 
 .social-icons a{
     margin-bottom: 10px;
     display: flex;
-    margin: 40px;
+    margin: 30px;
     justify-content: center;
 }
 
+section {
+    padding: 3em;
+}
+
+.card-section img{
+    width: 17em;
+    height: auto;
+}
 /* Les articles et les cards */
 .card-section {
-    margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: column;
-    grid-gap: 10px;
+    grid-gap: 0px;
     align-items: center;
 }
 
 .article {
     width: 90%;
-    margin-top: 100px;
     padding: 2em;
     font-size: 20px;
     text-align: justify;
@@ -187,58 +195,61 @@ button:hover{
 .article img{
     position: absolute; 
     z-index: -1; 
-    margin-left: 50px;
-    margin-top: -50px;
+    margin-left: 60px;
+    margin-top: -57px;
 }
 
 /* La photo de batman sur le côté */
 .batman {
     position: relative;
-    top: 2915px; 
+    top: 2610px; 
     right: 0px;
+    width: 400px; 
+    height: 290px;
 }
 
+.centree {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
 /* La photo de la justice league au complet */
 .justiceLeague {
+    width: 100%;
     position: absolute;
     padding-top: 700px;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 /* Maintenant le div MULTIMEDIA */
 .text-m {
-    margin-top: 700px; 
+    margin-top: 650px; 
     padding: 20px;
     color: white;
 }
 
 .multimedia {
     display: grid;
-    margin-top: 100px;
-    margin-bottom: 100px;
     color: white;
     grid-template-columns: 1fr 2fr 1fr; 
     align-items: center;
-    padding: 100px;
+    margin-bottom: 100px;
 }
 
 .card-multimedia {
-    width: 100%;
-    height: 250px;
+    width: 120%;
+    height: 220px;
     display: flex;
     flex-direction: row;
     border-radius: 10px;
     overflow: hidden;
-    background: linear-gradient(to right, #EDDEBF 10%, #19587D 60%);
+    background: linear-gradient(to right, #535353 10%, #03293f 60%);
 }
  
 .card-multimedia img {
-    width: 240px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
 }
  
 .card-multimedia .text { 
@@ -249,7 +260,7 @@ button:hover{
 }
  
 .card-multimedia h4 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: bold;
     opacity: 70%;
     margin-bottom: 5px;
@@ -264,7 +275,7 @@ button:hover{
 }
  
 .card-multimedia p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: white;
     margin-bottom: 5px;
     letter-spacing: 1px;
@@ -277,19 +288,18 @@ button:hover{
 }
 
 .bande-annonce {
-    width: 1040px; 
-    height: auto;
-    padding: 1em;
+    text-align: center;
 }
 
 /* Le formulaire de contact */
 .contact {
     width: 100%;
-    background: linear-gradient(to right, #4b4a4afd 10%, #0f202bf5 60%);
+    background: linear-gradient(160deg, #4b4a4afd 10%, #0f202bf5 60%);
     position: absolute;
     height: auto;
     margin-top: 150px;
     right: 0;
+    border: 1px solid rgba(128, 128, 128, 0.664);
 }
 
 /* Formulaire de contact */
@@ -305,7 +315,9 @@ button:hover{
     text-align: center;
     font-size: 25px;
     letter-spacing: 1px;
+    margin-bottom: 70px;
 }
+
 
 #formulaire-contact input[type="text"], #formulaire-contact input[type="email"] {
     width: 100%;
@@ -313,24 +325,33 @@ button:hover{
     background-color: transparent;
     border-bottom: 1px solid white;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     color: white;
+    opacity: 90%;
+}
+
+.checkbox-form {
+    width: 90%;
+    margin: 10px 0px 10px 0px;
+}
+
+.checkbox-form label{
+    opacity: 50%;
 }
 
 #formulaire-contact select{
     width: 100%;
-    height: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid white;
     color: white;
     background-color: transparent;
+    opacity: 50%;
 }
 
 select option { 
-    border-image: linear-gradient(to right, #fdfdfd7e 10%, #146696c2 60%);
-    margin: 10px;
+    background-color: transparent;
     color: black;
 }
 
@@ -351,6 +372,7 @@ select option {
     border-image-slice: 1;
     margin-top: 10px;
     vertical-align: middle;
+    margin-bottom: 20px;
 }
 
 .confirm-btn {
@@ -391,20 +413,38 @@ select option {
     visibility: visible;
 }
 
-/* footer */
-footer {
-    margin-top: 900px;
-    margin-bottom: 200px;
-    display: grid;
+/* Maintenant la section citation */
+.citation {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 1000px;
+    width: 100%;
+    margin: 0 auto;  
     color: white;
-    grid-template-columns: 1fr 2fr 1fr; 
-    align-items: center;
+    flex-wrap: wrap;
 }
 
-.text-footer {
-    text-align: center;
-    padding: 50px;
+/* Les appostrophes */
+.quot-o {
+    flex: 1;
 }
+
+.text-citation {
+    flex: 3;
+    text-align: center;
+}   
+
+.quot-f {
+    flex: 4;
+}
+
+/* ajuster la largeur des divs enfants */
+/* @media screen and (min-width: 768px) {
+    .quot-o, .quot-f, .text-citation {
+      width: 33.33%;
+    }
+  } */
 
 .nav-point {
     display: flex;
@@ -427,15 +467,9 @@ footer {
     background-color: rgb(6, 95, 197);
 }
 
-/* Les appostrophes */
-.quot-o {
-    margin-top: -250px;
-    margin-left: 80px;
-}
 
-.quot-f {
-    margin-top: 100px;
-    margin-left: 80px;
+/* footer */
+footer {
 }
 
 .copyright {
@@ -445,6 +479,8 @@ footer {
     right: 0;
     text-align: center;
     justify-content: center;
+    color: white;
+
 }
 
 .copyright label{

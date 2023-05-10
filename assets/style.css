@@ -1,3 +1,8 @@
+
+h2 {
+    font-size: 25px;
+}
+
 /* Navbar */
 a{
     color: white;
@@ -202,7 +207,7 @@ section {
 /* La photo de batman sur le côté */
 .batman {
     position: relative;
-    top: 2610px; 
+    top: 2720px; 
     right: 0px;
     width: 400px; 
     height: 290px;
@@ -224,6 +229,7 @@ section {
 
 /* Maintenant le div MULTIMEDIA */
 .text-m {
+    font-size: 25px;
     margin-top: 650px; 
     padding: 20px;
     color: white;
@@ -238,7 +244,7 @@ section {
 }
 
 .card-multimedia {
-    width: 120%;
+    width: 110%;
     height: 220px;
     display: flex;
     flex-direction: row;
@@ -255,8 +261,9 @@ section {
 .card-multimedia .text { 
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 5px;
     text-align: top;
+    overflow: auto;
 }
  
 .card-multimedia h4 {
@@ -270,15 +277,19 @@ section {
 .card-multimedia label {
     font-size: 0.8rem;
     font-weight: bold;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
+}
+
+.card-multimedia .text #titre{
+    font-family: Rajdhani;
+    font-size: 14px;
+    font-weight: 1;
+    margin-bottom: 10px;
 }
  
 .card-multimedia p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: white;
     margin-bottom: 5px;
-    letter-spacing: 1px;
 }
 
 /* Position de la dernière flèche */
@@ -289,6 +300,10 @@ section {
 
 .bande-annonce {
     text-align: center;
+}
+
+.bande-annonce img{
+    width: 90%;
 }
 
 /* Le formulaire de contact */
@@ -316,6 +331,11 @@ section {
     font-size: 25px;
     letter-spacing: 1px;
     margin-bottom: 70px;
+}
+
+#formulaire-contact h4{
+    font-size: 20px;
+    font-weight: 1;
 }
 
 
@@ -367,7 +387,7 @@ select option {
     height: 30px;
     background-color: transparent;
     color: white;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-image: linear-gradient(to right, #fdfdfd7e 10%, #146696c2 60%);
     border-image-slice: 1;
     margin-top: 10px;
@@ -419,7 +439,6 @@ select option {
     display: flex;
     justify-content: center;
     padding-top: 1000px;
-    width: 100%;
     margin: 0 auto;  
     color: white;
     flex-wrap: wrap;
@@ -427,24 +446,19 @@ select option {
 
 /* Les appostrophes */
 .quot-o {
-    flex: 1;
+    top: 0;
 }
 
 .text-citation {
-    flex: 3;
+    width: 50%;
     text-align: center;
+    padding: 5em;
 }   
 
-.quot-f {
-    flex: 4;
+.quot-f img{
+    position: relative;
+    margin-top: 200px;
 }
-
-/* ajuster la largeur des divs enfants */
-/* @media screen and (min-width: 768px) {
-    .quot-o, .quot-f, .text-citation {
-      width: 33.33%;
-    }
-  } */
 
 .nav-point {
     display: flex;
@@ -470,12 +484,13 @@ select option {
 
 /* footer */
 footer {
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
 
 .copyright {
     width: 100%;
     position: absolute;
-    margin-top: 500px;
     right: 0;
     text-align: center;
     justify-content: center;
@@ -489,7 +504,7 @@ footer {
 
 /* Les icones tout en bas */
 .icons-footer {
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 
@@ -502,31 +517,33 @@ footer {
 
 /* Responsivité */
 @media screen and (max-width: 1000px) {
+    .social-icons img{margin-right: -90px; width: 200%;}
+    .social-icons .bat{margin-right: -90px; width: 450%;}
     .card-section {display: inline;}
-    .article {width: 100%;}
-    .card-section .card img{width: 50%; height: auto;}
+    .article {width: 90%;}
+    .card-section .card img{width: 40%; height: auto;}
     .batman {visibility: hidden;}
     .container {justify-content: center; margin: 10px; padding: 0;}
-    .card-multimedia img{width: 30%;}
-    .bande-annonce{width: 700px; height: auto; padding: 2em; align-items: center; justify-content: center;}
+    .card-multimedia img{width: 20%;}
+    .bande-annonce img{width: 70%; height: auto; padding: 2em; align-items: center; justify-content: center;}
     .justiceLeague{justify-content: center; width: 90%;}
     .text-m{margin-top: 500px;}
     .formulaire-contact{width: 70%;}
-    footer .quot-o{width: 70px; height: auto; margin-left: 50px;}
-    footer .quot-f{width: 70px; height: auto; margin-left: 0;}
     footer .copyright{margin-left: 0;}
   }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 869px) {
     .article {width: 90%; font-size: 18px;}
     .card-multimedia {background-color: #19587D;}
-    .card-multimedia img{visibility: hidden; background-color: #19587D;}
+    .card-multimedia img{display: none; background-color: #19587D;}
     .card-multimedia .text{width: 100%; background-color: #19587D;}
     .text-m{margin-top: 500px;}
     .bande-annonce{width: 700px; height: auto; padding: 0; align-items: center; justify-content: center;}
     .formulaire-contact{padding: 0; margin: 0; width: 40%;}
-    footer .quot-o{width: 40px; height: auto; margin-left: 50px;}
-    footer .quot-f{width: 40px; height: auto; margin-left: 0;}
+    .citation{display: inline-block; text-align: center;}
+    .citation .text-citation{display: inline-block; text-align: center;}
+    .quot-o img{margin-top: 2rem;} 
+    .quot-f img{margin-top: 1rem;} 
     footer .copyright{margin-left: 0;}
 }
 

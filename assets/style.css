@@ -370,6 +370,24 @@ section {
     opacity: 50%;
 }
 
+/* Custom select */
+#frequence {
+    -webkit-appearance: none; /* Masquer l'apparence par défaut */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("Logos/Fleche2_avec_rotation.png");
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    background-size: 16px;
+    background-position: right center; /* Positionner l'image sur la droite et centrer verticalement */
+    padding-right: 20px; /* Ajouter un espace pour l'image */
+    padding-bottom: 5px;
+    cursor: pointer; /* Changer le curseur lorsque la souris passe sur le select */
+} 
+
+#frequence option {
+    background: linear-gradient(160deg, #4b4a4afd 10%, #0f202bf5 60%);
+}
+
 select option { 
     background-color: transparent;
     color: black;
@@ -525,10 +543,10 @@ footer {
     .batman {visibility: hidden;}
     .container {justify-content: center; margin: 10px; padding: 0;}
     .card-multimedia img{width: 20%;}
-    .bande-annonce img{width: 70%; height: auto; padding: 2em; align-items: center; justify-content: center;}
+    .bande-annonce img{width: 80%; height: auto; padding: 2em; align-items: center; justify-content: center;}
     .justiceLeague{justify-content: center; width: 90%;}
     .text-m{margin-top: 500px;}
-    .formulaire-contact{width: 70%;}
+    #formulaire-contact{width: 70%;}
     footer .copyright{margin-left: 0;}
   }
 
@@ -538,8 +556,8 @@ footer {
     .card-multimedia img{display: none; background-color: #19587D;}
     .card-multimedia .text{width: 100%; background-color: #19587D;}
     .text-m{margin-top: 500px;}
-    .bande-annonce{width: 700px; height: auto; padding: 0; align-items: center; justify-content: center;}
-    .formulaire-contact{padding: 0; margin: 0; width: 40%;}
+    .bande-annonce{margin-top: 5vh; margin-bottom: 5vh;}
+    .formulaire-contact{padding: 0; margin: 0; width: 150%;}
     .citation{display: inline-block; text-align: center;}
     .citation .text-citation{display: inline-block; text-align: center;}
     .quot-o img{margin-top: 2rem;} 
@@ -551,7 +569,19 @@ footer {
     .hero .fleche{margin-top: 100px;}
     .article {width: 100%; font-size: 16px;}
     .text-m{margin-top: 400px;}
-    .bande-annonce{width: 500px; height: auto; padding: 1em; align-items: center; justify-content: center; margin-bottom: 0;}
+    footer .quot-o{width: 40px; height: auto; margin-left: 2em;}
+    footer .quot-f{width: 40px; height: auto; margin-left: 0;}
+    footer .copyright{margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    nav ul{visibility: hidden;}
+    .social-icons img{width: 150%;}
+    .social-icons .bat{width: 200%;}
+    .hero .fleche{margin-top: 100px;}
+    .container{margin: 0;}
+    .article {width: 100%; font-size: 16px; left: 0};
+    .text-m{margin-top: 400px;}
     footer .quot-o{width: 40px; height: auto; margin-left: 2em;}
     footer .quot-f{width: 40px; height: auto; margin-left: 0;}
     footer .copyright{margin-left: 0;}

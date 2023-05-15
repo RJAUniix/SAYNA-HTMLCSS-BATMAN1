@@ -533,23 +533,24 @@ footer {
 
 /* Responsivité */
 @media screen and (max-width: 1000px) {
+    section{padding: 0px 10px 0px 10px;}
     .social-icons img{margin-right: -90px; width: 200%;}
     .social-icons .bat{margin-right: -90px; width: 450%;}
     .card-section {display: inline;}
-    .article {width: 90%;}
-    .card-section .card img{width: 40%; height: auto;}
+    .article {width: 90%; font-size: 1.2em; padding-left: 5% ;}
+    .card-section .card img{width: 30%; height: auto;}
     .batman {visibility: hidden;}
     .container {justify-content: center; margin: 10px; padding: 0;}
     .card-multimedia img{width: 20%;}
     .bande-annonce img{width: 80%; height: auto; padding: 2em; align-items: center; justify-content: center;}
-    .justiceLeague{justify-content: center; width: 90%;}
+    .justiceLeague{justify-content: center; padding-top: 25em;}
     .text-m{margin-top: 500px;}
     #formulaire-contact{width: 70%;}
     footer .copyright{margin-left: 0;}
+    .icons-footer .logo{width: 1.5rem;}
   }
 
 @media screen and (max-width: 869px) {
-    .article {width: 90%; font-size: 18px;}
     .card-multimedia {background-color: #19587D;}
     .card-multimedia img{display: none; background-color: #19587D;}
     .card-multimedia .text{width: 100%; background-color: #19587D;}
@@ -565,7 +566,7 @@ footer {
 
 @media screen and (max-width: 700px) {
     .hero .fleche{margin-top: 100px;}
-    .article {width: 100%; font-size: 16px;}
+    .article {font-size: 1.1em;}
     .text-m{margin-top: 400px;}
     footer .quot-o{width: 40px; height: auto; margin-left: 2em;}
     footer .quot-f{width: 40px; height: auto; margin-left: 0;}
@@ -578,7 +579,7 @@ footer {
     .social-icons .bat{width: 200%;}
     .hero .fleche{margin-top: 100px;}
     .container{margin: 0;}
-    .article {width: 100%; font-size: 16px; left: 0;}
+    .article {font-size: 1em;}
     .text-m{margin-top: 400px;}
     footer .quot-o{width: 40px; height: auto; margin-left: 2em;}
     footer .quot-f{width: 40px; height: auto; margin-left: 0;}

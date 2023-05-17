@@ -1,4 +1,4 @@
-
+/* Général */
 h2 {
     font-size: 25px;
 }
@@ -10,7 +10,6 @@ a{
     text-align: right;
     text-decoration-line: none;
 }
-
 
 nav {
     display:flex;
@@ -39,11 +38,6 @@ header {
     border-bottom: 0.3em solid #bcbbbd23;
 }
 
-/* Pour éviter la redirection au lien ancre brusquement */
-/* 
-a[href^="#"] {
-    scroll-behavior: smooth;
-} */
 
 /* Container de tous le corps du site */
 .container{
@@ -156,6 +150,7 @@ section {
     width: 17em;
     height: auto;
 }
+
 /* Les articles et les cards */
 .card-section {
     display: grid;
@@ -166,7 +161,7 @@ section {
 }
 
 .article {
-    width: 90%;
+    width: 85%;
     padding: 2em;
     font-size: 20px;
     text-align: justify;
@@ -368,28 +363,19 @@ section {
     opacity: 50%;
 }
 
-/* Custom select */
+/* Le code pour le select Customisé */
 #frequence {
     -webkit-appearance: none; /* Masquer l'apparence par défaut */
     -moz-appearance: none;
     appearance: none;
     background-image: url("Logos/Fleche2_avec_rotation.png");
-    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    background-repeat: no-repeat;
     background-size: 16px;
-    background-position: right center; /* Positionner l'image sur la droite et centrer verticalement */
-    padding-right: 20px; /* Ajouter un espace pour l'image */
+    background-position: right center; 
+    padding-right: 20px; 
     padding-bottom: 5px;
-    cursor: pointer; /* Changer le curseur lorsque la souris passe sur le select */
+    cursor: pointer; 
 } 
-
-#frequence option {
-    background: linear-gradient(160deg, #4b4a4afd 10%, #0f202bf5 60%);
-}
-
-select option { 
-    background-color: transparent;
-    color: black;
-}
 
 /* Pour positioner les boutons */
 .div-btn {
@@ -534,6 +520,7 @@ footer {
 /* Responsivité */
 @media screen and (max-width: 1000px) {
     section{padding: 0px 10px 0px 10px;}
+    .hero p{margin-top: 1em;}
     .social-icons img{margin-right: -90px; width: 200%;}
     .social-icons .bat{margin-right: -90px; width: 450%;}
     .card-section {display: inline;}
@@ -568,6 +555,7 @@ footer {
     .hero .fleche{margin-top: 100px;}
     .article {font-size: 1.1em;}
     .text-m{margin-top: 400px;}
+    .bande-annonce img{padding: 0; margin: 0;}
     footer .quot-o{width: 40px; height: auto; margin-left: 2em;}
     footer .quot-f{width: 40px; height: auto; margin-left: 0;}
     footer .copyright{margin-left: 0;}

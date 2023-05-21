@@ -68,13 +68,13 @@ body {
     background-color: #000000;
     font-family: Space Grotesk;
     overflow-x: hidden;
-    animation: body 1s ease-out forwards;
+    animation: body 2s ease-out forwards;
 
 }
 
 /* Annimation venant de la droite pour tous les éléments sauf les social-icons */
 body:not(.social-icons) {
-    animation: body 1s ease-out;
+    animation: body 2s ease-out;
 }
 
 @keyframes body {

@@ -34,7 +34,7 @@ nav li:hover {
 }
 
 header {
-    padding-bottom: 50px;
+    padding-bottom: 1.5em;
     border-bottom: 0.3em solid #bcbbbd23;
 }
 
@@ -376,6 +376,10 @@ section {
     padding-bottom: 5px;
     cursor: pointer; 
 } 
+
+#frequence option{
+    color: black;
+}
 
 /* Pour positioner les boutons */
 .div-btn {
